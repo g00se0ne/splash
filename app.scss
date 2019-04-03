@@ -1,0 +1,95 @@
+$sky: #daf2ff;
+$grass: #6fcf97;
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      $sky,
+      $sky 80%,
+      $grass 80%,
+      $grass 100%
+    );
+}
+
+.cloud-1,
+.cloud-2,
+.cloud-3 {
+  position: absolute;
+
+  img {
+    width: 100%;
+  }
+}
+
+.cloud-1 {
+  top: 0;
+  right: 0;
+  transform: translate(20%, -20%) rotate(45deg);
+  width: 300px;
+}
+
+.cloud-2 {
+  top: 40%;
+  left: 0;
+  transform: translate(-30%, -50%);
+  width: 200px;
+}
+
+.cloud-3 {
+  top: 50%;
+  right: 0;
+  transform: translate(30%, -50%) rotate(-45deg);
+  width: 200px;
+  z-index: -1;
+}
+
+.logo {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  width: 100%;
+
+  img {
+    width: 70%;
+    max-width: 400px;
+  }
+}
+
+.landscape {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 45%; // For ratio 16:9. 75% if ratio is 4:3
+  position: absolute;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  left: 50%;
+
+  img {
+    border: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
